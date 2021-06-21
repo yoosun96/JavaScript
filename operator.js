@@ -55,11 +55,11 @@ console.log(`and ${value1 && value2 && check()}`);
 // null 체크도된다 
 
 function check() {
-    for (let i = 0; i < 10; i++) {
-        //wasting time
-        console.log('OMG!');
-    }
-    return this;
+  for (let i = 0; i < 10; i++) {
+    //wasting time
+    console.log('OMG!');
+  }
+  return this;
 }
 
 // ! (not)
@@ -89,11 +89,11 @@ console.log(ellie1 === ellie3);
 // if, else if, else
 const name = 'coder';
 if (name === 'ellie') {
-    console.log('Welcome, Ellie!');
+  console.log('Welcome, Ellie!');
 } else if (name === 'coder') {
-    console.log('You are amaing coder');
+  console.log('You are amaing coder');
 } else {
-    console.log('unknown');
+  console.log('unknown');
 }
 
 // 9. Ternary operator : ?  삼항조건연산자
@@ -103,16 +103,16 @@ console.log(name === 'ellie' ? 'yes' : 'no');
 // 10. Switch statement
 const browser = 'IE';
 switch (browser) {
-    case 'IE':
-        console.log('go away!');
-        break;
-    case 'Chrome':
-    case 'Fire fox':
-        console.log('love you!');
-        break;
-    default:
-        console.log('same all!');
-        break;
+  case 'IE':
+    console.log('go away!');
+    break;
+  case 'Chrome':
+  case 'Fire fox':
+    console.log('love you!');
+    break;
+  default:
+    console.log('same all!');
+    break;
 }
 
 //11. Loops 반복문
@@ -121,49 +121,49 @@ switch (browser) {
 // 조건문이 맞을때만 실행하고싶으면 while
 let i = 3;
 while (i > 0) {
-    console.log(`while: ${i}`);
-    i--;
+  console.log(`while: ${i}`);
+  i--;
 }
 
 //do while loop, body code is executed first,
 // then check the codition.
 // 실행먼저하고 싶으면 do while
 do {
-    console.log(`do while: ${i}`);
-    i--;
+  console.log(`do while: ${i}`);
+  i--;
 } while (i > 0);
 
 // for loop, for(begin; condition; step)
 for (let i = 3; i > 0; i--) {
-    console.log(`for: ${i}`)
+  console.log(`for: ${i}`)
 }
 
 for (let i = 3; i > 0; i = i - 2) {
-    //inline variavle dexlearation
-    console.log(`inline variavle for: ${i}`);
+  //inline variavle dexlearation
+  console.log(`inline variavle for: ${i}`);
 }
 
 //nested loops 중첩 반복문
 for (let i = 0; i < 10; i++) {
-    for (let j = 0; j < 10; j++) {
-        console.log(`i: ${i}, j:${j}`);
-    }
+  for (let j = 0; j < 10; j++) {
+    console.log(`i: ${i}, j:${j}`);
+  }
 }
 
 // break 멈춰버리는것
 // continue 지금껏만 멈추고 다음으로 이어지게
 
 for (let i = 0; i < 11; i++) {
-    if (i % 2 !== 0) {
-        continue;
-    } else {
-        console.log(`cotinue: ${i}`);
-    }
+  if (i % 2 !== 0) {
+    continue;
+  } else {
+    console.log(`cotinue: ${i}`);
+  }
 }
 
 for (let i = 0; i < 11; i++) {
-    if (i > 8) {
-        break;
-    }
-    console.log(`break: ${i}`);
+  if (i > 8) {
+    break;
+  }
+  console.log(`break: ${i}`);
 }
