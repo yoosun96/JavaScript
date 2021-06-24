@@ -1,26 +1,41 @@
-// number, string, boolean, null. undefined
-// let number = 2;
-// let number2 = number;
-// //console.log(number);
-// //console.log(number2);
+class Counter {
+  constructor(runEveryFiveTimes) {
+    this.counter = 0;
+    this.callback = runEveryFiveTimes;
+  }
 
-// number2 = 3;
-// //console.log(number);
-// //console.log(number2);
+  increase() {
+    this.counter++;
+    console.log(this.counter);
+    if (this.counter % 5 === 0) {
+      this.callback && this.callback(this.counter);
+      if (this.callback) {
+        this.callback(this.counter);
+      }
+    }
+  }
+}
 
 
-// object
-// let obj = {
-//   name: 'yoosun',
-//   age: '26',
-// };
-// console.log(obj.name);
+function printSomething(num) {
+  console.log(`Wow! ${num}`);
+}
 
-// let obj2 = obj;
+function alertNum(num) {
+  alert(`alert! ${num}`);
+}
+const coolCounter = new Counter();
 
-// console.log(obj2.name);
+coolCounter.increase();
+coolCounter.increase();
+coolCounter.increase();
+coolCounter.increase();
+coolCounter.increase();
+coolCounter.increase();
+coolCounter.increase();
+coolCounter.increase();
+coolCounter.increase();
+coolCounter.increase();
 
-// obj.name = 'james';
-// console.log('--------');
-// console.log(obj.name);
-// console.log(obj2.name);
+const printCounter = new Counter(printSomething);
+const alertCounter = new Counter(alertNum);
